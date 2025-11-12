@@ -5,6 +5,7 @@ The server provides tools to search and fetch entries from RSS feeds
 specifically from Google Blog Search and Google Cloud YouTube channel.
 
 Deployed on FastMCP Cloud Platform.
+https://rss-crimson-condor.fastmcp.app/mcp
 """
 
 
@@ -107,4 +108,4 @@ def fetch_youtube_feed(query: str, max_results: int=5) -> list:
     return search_feed(FEEDS["google_cloud_youtube"].url, query, max_results)
     
 if __name__ == "__main__":
-    mcp.run(transport = "http")  # http transport for remote deployment
+    mcp.run(transport="sse") # http transport for remote deployment
