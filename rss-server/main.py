@@ -4,7 +4,7 @@ RSS Feed Search MCP Server
 The server provides tools to search and fetch entries from RSS feeds
 specifically from Google Blog Search and Google Cloud YouTube channel.
 
-Deployed on FastMCP Cloud Platform.
+Deployed on FastMCP Cloud Platform. [Need to Fix]
 https://rss-crimson-condor.fastmcp.app/mcp
 """
 
@@ -18,7 +18,7 @@ import certifi
 from dataclasses import dataclass
 
 # configure SSL and logging
-# ssl._create_default_https_context = ssl._create_unverified_context
+ssl._create_default_https_context = ssl._create_unverified_context
 logging.basicConfig(level=logging.INFO, stream=sys.stderr)
 
 @dataclass
@@ -107,5 +107,5 @@ def fetch_youtube_feed(query: str, max_results: int=5) -> list:
     
     return search_feed(FEEDS["google_cloud_youtube"].url, query, max_results)
     
-# if __name__ == "__main__":
-#     mcp.run(transport="sse") # http transport for remote deployment
+if __name__ == "__main__":
+    mcp.run(transport="sse") # http transport for remote deployment
