@@ -1,0 +1,10 @@
+[project]
+name = "mcp-server"
+version = "0.1.0"
+description = "MCP S"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "feedparser>=6.0.12",
+    "mcp[cli]>=1.21.0",
+]
