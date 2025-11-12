@@ -107,5 +107,5 @@ def fetch_youtube_feed(query: str, max_results: int=5) -> list:
     
     return search_feed(FEEDS["google_cloud_youtube"].url, query, max_results)
     
-if __name__ == "__main__":
-    mcp.run(transport="sse") # http transport for remote deployment
+# if __name__ == "__main__":
+#     mcp.run(transport="sse") # http transport for remote deployment
