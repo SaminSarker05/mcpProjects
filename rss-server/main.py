@@ -18,7 +18,7 @@ import certifi
 from dataclasses import dataclass
 
 # configure SSL and logging
-ssl._create_default_https_context = ssl._create_unverified_context
+# ssl._create_default_https_context = ssl._create_unverified_context
 logging.basicConfig(level=logging.INFO, stream=sys.stderr)
 
 @dataclass
